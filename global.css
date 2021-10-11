@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --primary-color: #144B9A;
+    --secondary-color: #182f4b;
+    --white: rgb(255, 255, 255);
+    --text-secondary-color: #468AF0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.app-container {
+    display: flex;
+    overflow: scroll;
+    overflow: hidden;
+}
+.left-section {
+    display: flex;
+    width: 37.7vw;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+.middle-section {
+    width: 56.5vw;
+    height: 100vh;
+}
+.right-section {
+    width: 5.8vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-color)
+}
+.logo {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white);
+}
+.logo-domain {
+    color: var(--text-secondary-color)
+}
+.welcome-container {
+    padding: 30px 0 0 100px;
+}
+.hello {
+    margin-top: 70px;
+    text-transform: uppercase;
+    color: var(--text-secondary-color);
+}
+.name {
+    font-size: 100px;
+    margin-left: -5px;
+    position: absolute;
+    color: var(--white);
+    font-family: 'Catamaran', sans-serif;
+}
+.profession {
+    font-size: large;
+    margin-top: 130px;
+    color:var(--white); 
+}
+.primary-button{
+    border: 0;
+    width: 13vw;
+    height: 9.5vh;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: solid #fff 1px;
+    background-color: transparent;
+    transition: background-color .2s ease-in;
+}
+.primary-button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+.play-button-container {
+    top: 20em;
+    width: 40px;
+    left: 28.1em;
+    height: 40px;
+    padding: 40px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.play-button {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./src/icon/play-solid.svg');
+}
+.icons-container {
+    display: flex;
+    bottom: -280px;
+    position: absolute;
+    margin-left: 100px;
+    align-self: flex-start;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 28px;
+    background-repeat: no-repeat;
+    padding: 10px 10px;
+    align-items: flex-start;
+}
+.icon:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--primary-color);
+}
+.github-icon {
+    background-image: url(./src/icon/github-brands.svg);
+}
+.insta-icon {
+    background-image: url(./src/icon/instagram-brands.svg);
+}
+.mail-icon {
+    background-image: url(./src/icon/envelope-square-solid.svg);
+}
+.in-icon {
+    background-image: url(./src/icon/linkedin-brands.svg);
+}
+.welcome-container,.play-button-container, .icons-container {
+    margin-bottom: 300px;
+}
+.right-section-navigation {
+    height: 70vh;
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.right-section-navigation li {
+    width: 18px;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    align-self: center;
+    writing-mode: tb-rl;
+    padding: 3px 3px 5px;
+    transform: rotate(360deg);
+    text-transform: uppercase;
+    transition: background-color .2s ease-in;
+}
+.active-navigation-item,
+.right-section-navigation li:hover {
+    background-color: #2f4968;
+}
+.picture-container {
+    height: 76vh;
+    width: 56.5vw;
+    background-size: 56.5vw;
+    background-repeat: no-repeat;
+    background-image: url('./src/img/bg.jpg') ;
+}
+.detail-container {
+    height: 30vh;
+    padding: 25px;
+}
+.detail-container p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 20px;
+    color: rgba(43, 42, 42, 0.8);
+}
+.detail-container button {
+    border: 0;
+    padding: 15px 30px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    background-color: #182f4b;
+    cursor: pointer;
+}
+.bars {
+    display: flex;
+    cursor: pointer;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.line {
+    height: 5px;
+    margin-bottom: 2px;
+    background-color: rgb(255, 255, 255);
+}
+.line:nth-child(1) {
+    width: 25px;
+}
+.line:nth-child(2) {
+    width: 17px;
+}
+.line:nth-child(3) {
+    width: 9px;
+}
