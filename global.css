@@ -262,7 +262,7 @@
         background-size: 100vw;
         position: absolute;
         top: 25%;
-        left: 35%;
+        left: 30%;
     }
     .welcome-container {
         padding: 0 30px;
@@ -279,6 +279,7 @@
     .profession {
         margin-top: 230px;
         font-size: 15px;
+        padding: 0 30px;
     }
     .primary-button {
         width: 300px; 
