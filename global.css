@@ -13,7 +13,6 @@
 }
 .app-container {
     display: flex;
-    overflow: scroll;
     overflow: hidden;
 }
 .left-section {
@@ -35,6 +34,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    transition: left 0.5s ease-in;
     background-color: var(--secondary-color)
 }
 .logo {
@@ -193,7 +193,7 @@
     background-color: #182f4b;
     cursor: pointer;
 }
-.bars {
+.lines {
     display: flex;
     cursor: pointer;
     align-items: flex-end;
@@ -213,4 +213,111 @@
 }
 .line:nth-child(3) {
     width: 9px;
+}
+@media only screen and (max-width: 700px) {
+    .app-container {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .active-navigation-item {
+        background-color: transparent;
+    }
+    .left-section,
+    .middle-section,
+    .right-section,
+    .picture-container,
+    .icons-container {
+        width: 100vw;
+    }
+    .middle-section {   
+        height: 40vh;
+    }
+    .play-button-container {
+        display: none;
+    }
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail-container p {
+        width: 350px;
+        text-align: center;
+    }
+    .icons-container {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .detail-container button {
+        width: 300px;
+    }
+    .picture-container {
+        width: 150px;
+        height: 150px;
+        background-size: 100px;
+        background-position: center;
+        border-radius: 75px;
+        background-size: 100vw;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+    }
+    .welcome-container {
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .name {
+        font-size: 50px;
+    }
+    .hello {
+        display: none;
+    }
+    .profession {
+        margin-top: 230px;
+        font-size: 15px;
+    }
+    .primary-button {
+        width: 300px; 
+    }
+    .lines {
+        position: absolute;
+        top: 21.3px;
+        right: 105vw;
+    }
+    .lines-active {
+        right: 5vw;
+    }
+    .logo {
+        height: 18vh;
+        background-color: rgba(24, 47, 75, 0.5);
+        width: 100vw;
+    }
+    .logo span:nth-child(1) {
+        display: none;
+    }
+    .right-section {
+        position: absolute;
+        left: 100vw;
+    }
+    .nav-active {
+        left: 0; 
+    }
+    .right-section-navigation .nav-item-visible {
+        animation: rotate 0.5s 0.1s ease-in forwards;
+    }
+}
+@keyframes rotate {
+    from {
+        color: rgb(226, 226, 226);
+    }
+    to {
+        width: 100px;
+        text-align: center;
+        writing-mode: horizontal-tb;
+        transform: rotate(-90deg);
+    }
 }
